@@ -1,0 +1,21 @@
+---
+import ResetCSS from "@appzic/astro-reset-css";
+import Navbar from "../components/Navbar.astro";
+import "../styles/global.css";
+const { title } = Astro.props;
+---
+
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <link rel='icon' type='image/svg+xml' href='/umay-protfolio/favicon.svg' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+    <ResetCSS />
+    <title>{title}</title>
+  </head>
+  <body class='jost-regular'>
+    <Navbar />
+    <slot />
+  </body>
+</html>

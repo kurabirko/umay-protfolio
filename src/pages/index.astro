@@ -1,0 +1,39 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import products from "../images/products.png";
+
+const bg = `url(${products.src})`;
+---
+
+<style define:vars={{ bg }}>
+  .container {
+    flex-grow: 1;
+    background-repeat: no-repeat;
+    background-position-y: 10rem;
+    background-clip: content-box;
+    background-image: var(--bg);
+  }
+
+  .header {
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: large;
+    font-size: 1.4rem;
+  }
+
+  h1 {
+    margin-block-start: 8rem;
+    font-size: 6rem;
+  }
+</style>
+
+<PageLayout title="Home">
+  <main class="container">
+    <hgroup class="header">
+      <h1 class="jost-bolditalic">Umay Demirel</h1>
+      <p class="subtitle">Industrial Design Student <br /> based in Turkey</p>
+    </hgroup>
+  </main>
+</PageLayout>

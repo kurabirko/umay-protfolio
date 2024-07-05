@@ -1,0 +1,35 @@
+---
+import { Image } from "astro:assets";
+import logoRaw from "../images/logo.svg";
+---
+
+<style>
+  nav {
+    display: flex;
+    width: 100%;
+    padding: 1rem 0.5rem;
+    align-items: center;
+    font-size: 1.4rem;
+  }
+
+  a {
+    color: white;
+    margin-inline: 1.2rem;
+  }
+</style>
+
+<nav class='jost-bold'>
+  <a href='/umay-protfolio' style={{ marginInlineEnd: "auto" }}>
+    <Image
+      src={logoRaw}
+      height={48}
+      alt='Umay Demirel'
+      loading='eager'
+      class='noselect'
+    />
+  </a>
+
+  <a href='/umay-protfolio/about' class='jost-bold'>About</a>
+  <a href='/umay-protfolio/projects' class='jost-bold'>Projects</a>
+  <a href='/umay-protfolio/contact' class='jost-bold'>Contact</a>
+</nav>
